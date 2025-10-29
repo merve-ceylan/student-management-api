@@ -29,7 +29,7 @@ This project demonstrates **Spring Validation**, **RESTful API design**, and bas
 
 
 
-API Endpoints
+## API Endpoints
 Method	Endpoint	Description
 
 POST	/api/students	Register a new student
@@ -44,19 +44,23 @@ DELETE	/api/students/{index}	Delete a student by index
 
 
 
-Example Requests
+## Example Requests
+
 Add a new student (POST)
+
 $student = @{name="John Doe"; age=21; email="john@example.com"} | ConvertTo-Json
+
 Invoke-RestMethod -Uri "http://localhost:8080/api/students" -Method POST -Body $student -ContentType "application/json"
 
 Get all students (GET)
 Invoke-RestMethod -Uri "http://localhost:8080/api/students" -Method GET
 
 Get a student by index (GET)
+
 $index = 0
 Invoke-RestMethod -Uri "http://localhost:8080/api/students/$index" -Method GET
 
-Validation Rules
+## Validation Rules
 
 name: must not be empty
 
