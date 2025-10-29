@@ -42,31 +42,33 @@ PUT	/api/students/{index}	Update a student by index
 
 DELETE	/api/students/{index}	Delete a student by index
 
-
+---
 
 ## Example Requests
 
-Add a new student (POST)
+- Add a new student (POST)
 
 $student = @{name="John Doe"; age=21; email="john@example.com"} | ConvertTo-Json
 
 Invoke-RestMethod -Uri "http://localhost:8080/api/students" -Method POST -Body $student -ContentType "application/json"
 
-Get all students (GET)
+- Get all students (GET)
 Invoke-RestMethod -Uri "http://localhost:8080/api/students" -Method GET
 
-Get a student by index (GET)
+- Get a student by index (GET)
 
 $index = 0
 Invoke-RestMethod -Uri "http://localhost:8080/api/students/$index" -Method GET
 
+---
+
 ## Validation Rules
 
-name: must not be empty
+- name: must not be empty
 
-age: must be positive
+- age: must be positive
 
-email: must be a valid email format
+- email: must be a valid email format
 
 Invalid requests will return a 400 Bad Request with descriptive error messages.
 
