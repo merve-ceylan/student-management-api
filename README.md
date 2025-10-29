@@ -27,15 +27,23 @@ This project demonstrates **Spring Validation**, **RESTful API design**, and bas
 
 ---
 
-The application will start on http://localhost:8080.
+
 
 API Endpoints
 Method	Endpoint	Description
+
 POST	/api/students	Register a new student
+
 GET	/api/students	Get all students
+
 GET	/api/students/{index}	Get a single student by index
+
 PUT	/api/students/{index}	Update a student by index
+
 DELETE	/api/students/{index}	Delete a student by index
+
+
+
 Example Requests
 Add a new student (POST)
 $student = @{name="John Doe"; age=21; email="john@example.com"} | ConvertTo-Json
