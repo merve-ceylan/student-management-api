@@ -72,3 +72,8 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/students/$index" -Method GET
 
 Invalid requests will return a 400 Bad Request with descriptive error messages.
 
+---
+
+👩‍💻 Created by Merve CEYLAN
+Feel free to fork this project, add new features, or use it for learning purposes!
+
